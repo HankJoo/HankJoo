@@ -15,7 +15,8 @@
 ***
 >#### 새로운 경험 중..
 
-> - Markdown GIT JEST SPRING SPRING BOOT 
+> - Markdown GIT 
+> - TYPESCRIPT JEST SPRING BOOT 
 > - Linux Ubuntu
 > - IntelliJ World.  
 ***
