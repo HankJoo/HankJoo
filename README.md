@@ -13,7 +13,7 @@
 > - ORACLE MSSQL MYSQL POSTGRESQL  
 > - VS CODE, Studio
 ***
->#### 새로운 경험 중..
+>#### 새로운 경험..
 
 > - Markdown GIT 
 > - TYPESCRIPT JEST SPRING BOOT 
