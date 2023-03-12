@@ -12,6 +12,7 @@ flowchart TB
 %% Colors %%
 classDef blue fill:blue,stroke:#000,stroke-width:2px,color:#fff
 classDef orange fill:orange,stroke:#000,stroke-width:2px,color:#fff
+classDef red fill:red,stroke:#000,stroke-width:2px,color:#fff
       
     subgraph BASIC                          
         D(Dev Environment):::blue
@@ -33,14 +34,14 @@ classDef orange fill:orange,stroke:#000,stroke-width:2px,color:#fff
            
         end
       
-    B4---B401--->B5
+    B4---|Important|B401--->B5
         
         subgraph "B 2" 
             B5(Layered Architecture)
             B6(DIP, IoC Container)
             B7(RESTful API Design)
             B8(Spring Core)
-            B9(Spring Boot)
+            B9(Spring Boot):::red 
             B10(Spring WebMVC)
             B5-->B6-->B7-->B8-->B9-->B10
         end        
@@ -58,21 +59,21 @@ classDef orange fill:orange,stroke:#000,stroke-width:2px,color:#fff
             F5(JavaScript - Unit Test)
             F6(TypeScript)
             F1-->F2-->F3-->F4-->F5-->F6            
-            F3---F301--->F4
+            F3---|Important|F301--->F4
         end
     
-    F6 --> F7   
+    F6 ---> F7   
         
         subgraph "F 2"
-            F7(React Web Framework)                
+            F7(React Web Framework):::red                
         end       
     end
     
     F7 --> P1
     B10 --> P1
-    P1 --> P2
+    P1 ---> P2
     
-    B4<--->F5
+    B4<-..->|BOTH TEST|F5
     
     subgraph "Project"
             P1(Toy Project)
