@@ -27,8 +27,10 @@ classDef orange fill:orange,stroke:#000,stroke-width:2px,color:#fff
             B1(Java - Basic)
             B2(Java - SOLID)
             B3(Java - ETC)        
-            B4(Java - Unit Test)        
+            B4(Java - Unit Test)     
+            F401([Junit,Mockito,AssertJ])   
             B1-->B2-->B3-->B4
+            B4---F401--->B5
         end
     
     B4-->B5
@@ -51,16 +53,18 @@ classDef orange fill:orange,stroke:#000,stroke-width:2px,color:#fff
             F1(HTML)
             F2(CSS)
             F3(JavaScript - Part 1)
+            F301([프라미스,AWAIT,ASYNC])
             F4(JavaScript - Part 2)
             F5(JavaScript - Unit Test)
             F6(TypeScript)
-            F1-->F2-->F3-->F4-->F5-->F6
+            F1-->F2-->F3-->F4-->F5-->F6            
+            F3---F301--->F4
         end
     
     F6 --> F7   
         
         subgraph "F 2"
-            F7(React)                
+            F7(React Web Framework)                
         end       
     end
     
@@ -68,7 +72,7 @@ classDef orange fill:orange,stroke:#000,stroke-width:2px,color:#fff
     B10 --> P1
     P1 --> P2
     
-    B4---F5
+    B4<--->F5
     
     subgraph "Project"
             P1(Toy Project)
