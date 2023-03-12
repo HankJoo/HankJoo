@@ -28,12 +28,12 @@ classDef orange fill:orange,stroke:#000,stroke-width:2px,color:#fff
             B2(Java - SOLID)
             B3(Java - ETC)        
             B4(Java - Unit Test)     
-            F401([Junit,Mockito,AssertJ])   
+            B401([Junit,Mockito,AssertJ])   
             B1-->B2-->B3-->B4
-            B4---F401--->B5
+           
         end
-    
-    B4-->B5
+      
+    B4---B401--->B5
         
         subgraph "B 2" 
             B5(Layered Architecture)
