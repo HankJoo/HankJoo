@@ -83,6 +83,20 @@ classDef red fill:red,stroke:#000,stroke-width:2px,color:#fff
 
 
 
+
+```
+
+```mermaid
+flowchart LR
+
+classDef blue fill:blue,stroke:#000,stroke-width:2px,color:#fff
+
+    principle>Principle 원칙]:::blue---A[IoC - inversion of Control]-->E[제어는 컨테이너,프레임워크가 담당해야 한다.]
+    principle---B[DIP - Dependency Inversion Principle ]-->F[저수준 모듈이 고수준 모듈에 의존해야 한다.]
+    pattern>Pattern 방법]:::blue---C[DI - Dependency Injection]-.-G1[Constructor Injection]
+    C-.-G2[Setter Injection]
+    C-.-G3[Method Injection]
+    framework>Framework]:::blue---D[IoC Container]-->|has|H[오프젝트 빈]
 ```
 
 >#### 프로그래밍 경험
