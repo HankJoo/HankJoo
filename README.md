@@ -8,12 +8,10 @@
 
 ```mermaid
 flowchart TB
-
 %% Colors %%
 classDef blue fill:blue,stroke:#000,stroke-width:2px,color:#fff
 classDef orange fill:orange,stroke:#000,stroke-width:2px,color:#fff
 classDef red fill:red,stroke:#000,stroke-width:2px,color:#fff
-      
     subgraph BASIC                          
         D(Dev Environment):::blue
         M(Markdown)
@@ -29,21 +27,23 @@ classDef red fill:red,stroke:#000,stroke-width:2px,color:#fff
             B2(Java - SOLID)
             B3(Java - ETC)        
             B4(Java - Unit Test)     
-            B401([Junit,Mockito,AssertJ])   
             B1-->B2-->B3-->B4
            
         end
       
-    B4---|Important|B401--->B5
+    B4--->|Junit,Mockito,AssertJ|B5
         
         subgraph "B 2" 
             B5(Layered Architecture)
-            B6(DIP, IoC Container)
+            B6(DIP-principle, IoC Container-framework)
             B7(RESTful API Design)
             B8(Spring Core)
-            B9(Spring Boot):::red 
-            B10(Spring WebMVC)
-            B5-->B6-->B7-->B8-->B9-->B10
+            B9(Spring WebMVC)
+            B10(Spring Boot):::red
+            B11(Spring Boot Test) 
+            
+            B5-->B6-->|제어역전-객체관리, 종속주입-고차원 관리|B7
+            B7-->|Resource,Http Method,Stateless,Cacheable,Uri|B8-->B9-->B10-->B11
         end        
     end
     
@@ -53,13 +53,12 @@ classDef red fill:red,stroke:#000,stroke-width:2px,color:#fff
         subgraph "F 1"
             F1(HTML)
             F2(CSS)
-            F3(JavaScript - Part 1)
-            F301([프라미스,AWAIT,ASYNC])
+            F3(JavaScript - Part 1)            
             F4(JavaScript - Part 2)
             F5(JavaScript - Unit Test)
-            F6(TypeScript)
-            F1-->F2-->F3-->F4-->F5-->F6            
-            F3---|Important|F301--->F4
+            F6(TypeScript)                        
+            F3-->|콜백,Promise,AWAIT,ASYNC|F4
+            F1-->F2-->F3-->|체이닝,Promise API|F4-->F5-->F6
         end
     
     F6 ---> F7   
@@ -69,11 +68,15 @@ classDef red fill:red,stroke:#000,stroke-width:2px,color:#fff
         end       
     end
     
-    F7 --> P1
-    B10 --> P1
+    F7 -->|hooks,fetch,event,rendering,redux,router,token|P1
+    B11 --> P1
     P1 ---> P2
     
-    B4<-..->|BOTH TEST|F5
+    
+    B4<-..->|TEST|F5
+    B4<-..->|TEST|B11
+    
+    
     
     subgraph "Project"
             P1(Toy Project)
