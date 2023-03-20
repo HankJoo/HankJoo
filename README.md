@@ -40,7 +40,7 @@ classDef red fill:red,stroke:#000,stroke-width:2px,color:#fff
             B9(Spring WebMVC)
             B10(Spring Boot):::red
             B11(Spring Boot Test) 
-            B12(Spring Boot JPA)
+            B12(Spring Data JPA)
             
             B5-->B6-->|제어역전-객체관리, 종속주입-고차원 관리|B7
             B7-->B8-->|Resource,Http Method,Stateless,Cacheable,Uri|B9-->B10-->B12
@@ -118,26 +118,26 @@ classDef blue fill:blue,stroke:#000,stroke-width:2px,color:#fff
 > - C#.NET ASP.NET JAVA Android SOAP WCF REST 
 > - HTML CSS JAVASCRIPT REACT NEXT.JS NODE.JS PRISMA(ORM)
 > - ORACLE MSSQL MYSQL POSTGRESQL  
-> - VS CODE, Studio
+> - VS CODE, VS Studio
 ***
 >#### 새로운 경험..
 
 > - Markdown GIT 
-> - TYPESCRIPT SPRING BOOT
+> - TYPESCRIPT SPRING BOOT JPA
 > - JEST Junit Mockito AssertJ
 > - Linux Ubuntu
 > - IntelliJ World.  
 > - Mermaid
+> - Domain Driven Design
 ***
 
 
 
 >#### 하고 싶은 말
 
-> - 내 주변의 모든 분들이 스승이다.
-> - 자신감을 갖자. 
+> - 내 주변의 모든 분들이 스승이다. 
 > - 노력하면 언젠간 된다.
-> - 아직(?) 젋다.
+> - 아직(?) 젊다.
 > - MACBOOK이 없다. 언제 나올라나. 낙오하면 안되는데...
 
 >#### 지금 목표
