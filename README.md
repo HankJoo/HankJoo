@@ -79,16 +79,17 @@ classDef red fill:red,stroke:#000,stroke-width:2px,color:#fff
     subgraph "Project"
             P1(Toy Project)
             P2(Domain Driven Design)            
-            P3(Application Modernization Project):::orange        
-    end 
-    
-    subgraph "Microservice"
+            P3(Application Modernization Project):::orange    
             P21(Application Layer)
             P22(Domain Model Layer):::orange
             P23(Infrastructure Layer)
             P21-->P23
             P23-->P22
-            P21-->P22
+            P21-->P22    
+    end 
+    
+    subgraph "Microservice"
+
     end
     
     P22-..-P2
